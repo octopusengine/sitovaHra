@@ -16,7 +16,6 @@ sADDR = (host, port)
 buff = 1024
 rMessage=""
 
-
 try:
   servSock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
   servSock.bind(sADDR)
@@ -59,9 +58,9 @@ def sendAuto():
 			cliSock.send(sMessage)
 			rMessage=""
 
-t1 = threading.Thread(target=sendAuto, name=3)
-t2 = threading.Thread(target=receive, name=4)
+t1snd = threading.Thread(target=sendAuto, name=3)
+t2rec = threading.Thread(target=receive, name=4)
 
-t1.start()
-t2.start()
+t1snd.start()
+t2rec.start()
 

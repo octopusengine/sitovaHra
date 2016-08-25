@@ -1,4 +1,8 @@
 #!bin/usr/env python
+
+#https://www.reddit.com/r/learnpython/comments/3ffiy6/trying_to_make_a_fullduplex_chat_system/
+#https://raw.githubusercontent.com/octopusengine/sitovaHra/master/sitovahra/py-socket/server5.py
+
 """Let's make some sockets!"""
 import time, socket
 from time import ctime

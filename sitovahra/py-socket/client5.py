@@ -31,8 +31,8 @@ def send():
         sMessage = raw_input(">>")
         cliSock.send(sMessage)
 
-t1 = threading.Thread(target=send, name=1)
-t2 = threading.Thread(target=receive, name=2)
+t1snd = threading.Thread(target=send, name=1)
+t2rec = threading.Thread(target=receive, name=2)
 
-t1.start()
-t2.start()
+t1snd.start()
+t2rec.start()
